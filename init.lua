@@ -1,0 +1,13 @@
+-- Load user options
+require("config.options")
+
+-- Load user keymaps
+require("config.keymaps")
+
+-- Load Lazy's plugin manager
+require("config.lazy")
+
+-- === THEMES GLOBAL CONFIGURATION ===
+vim.cmd([[colorscheme wildcharm]])
+-- Un color más suave para que la letra se lea mejor al seleccionar
+vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#3e4452", fg = "#abb2bf", bold = true })
