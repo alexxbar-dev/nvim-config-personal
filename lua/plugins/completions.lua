@@ -9,6 +9,8 @@ return {
       "saadparwaiz1/cmp_luasnip",     -- Puente entre snippets y cmp
       "rafamadriz/friendly-snippets", -- Colección de snippets (estilo VS Code)
       "onsails/lspkind.nvim",         -- Iconos para el menú de autocompletado
+      "hrsh7th/cmp-buffer",           -- Sugerencias de texto del archivo actual
+      "hrsh7th/cmp-path",             -- Sugerencias de rutas de archivos
     },
     config = function()
       local cmp = require("cmp")
@@ -84,11 +86,11 @@ return {
         }),
 
         sources = cmp.config.sources({
-          { name = "nvim_lsp" },                   -- Sugerencias del servidor de lenguaje
-          { name = "luasnip" },                    -- Snippets
+          { name = "nvim_lsp" }, -- Sugerencias del servidor de lenguaje
+          { name = "luasnip" },  -- Snippets
         }, {
-          { name = "buffer", keyword_length = 3 }, -- Palabras del archivo actual, solo sugiere palabras tras 3 letras
-          { name = "path" },                       -- Rutas de archivos en tu sistema
+          { name = "buffer" },   -- Palabras del archivo actual, solo sugiere palabras tras 3 letras
+          { name = "path" },     -- Rutas de archivos en tu sistema
         }),
       })
 
