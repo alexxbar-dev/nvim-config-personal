@@ -22,12 +22,14 @@ Esta es mi configuración personalizada de Neovim construida desde cero utilizan
 Para replicar esta configuración, asegúrate de tener instalado **Neovim (v0.9+)** y **Git**. Luego, ejecuta:
 
 1. Clona este repositorio en tu carpeta de configuración:
-    ```bash
-    git clone https://github.com/alexxbar-dev/nvim-config-personal.git ~/.config/nvim
+```bash
+git clone https://github.com/alexxbar-dev/nvim-config-personal.git ~/.config/nvim
+```
 
 2. Abre Neovim:
-    ```bash
-    nvim
+```bash
+nvim
+```
 
 3. Espera a que Lazy.nvim instale todos los plugins automáticamente.
 
@@ -64,10 +66,36 @@ Para replicar esta configuración, asegúrate de tener instalado **Neovim (v0.9+
 | Acción | Atajo |
 | :--- | :--- |
 | Abre el recuadro de autocompletado | `<C-Space>` |
-| Cierra el recuadro de autocompletado  | `<C-e>` |
+| Cierra el recuadro de autocompletado | `<C-e>` |
 | Confirma e ingresa la selección | `<CR> o Enter` |
 | Siguiente elemento o snippet  | `<C-n>` |
 | Anterior elemento o snippet | `<C-p>` |
 
 > [!TIP]
 > Puedes consultar o modificar todos los comandos personalizados en el archivo `lua/core/keymaps.lua`.
+
+## Estructura de archivos
+```text
+~/.config/nvim
+├── init.lua                 # Punto de entrada (carga los Plugins)
+├── lua/
+│   ├── config/              # Configuración base (opciones, atajos)
+│   │   ├── keymaps.lua
+│   │   ├── lazy.lua
+│   │   └── options.lua
+│   └── plugins/             # Configuración específica de plugins
+│       ├── autopairs.lua
+│       ├── autotag.lua
+│       ├── completions.lua
+│       ├── explorer.lua
+│       ├── formatter.lua
+│       ├── gitsigns.lua
+│       ├── lsp.lua
+│       ├── telescope.lua
+│       ├── themes.lua
+│       ├── treesitter.lua
+│       └── ui.lua
+├── README.md
+├── .gitignore               # Archivos excluidos
+└── lazy-lock.json           # Versiones exactas de tus plugins
+```
