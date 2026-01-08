@@ -1,0 +1,4 @@
+# Ignorar archivos temporales de edición
+*.swp
+.netrwhist
+undo/

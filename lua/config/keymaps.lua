@@ -1,7 +1,7 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
--- Fijar la tecla líder 
+-- Fijar la tecla líder
 vim.g.mapleader = " "
 
 -- Agregar líneas sin entrar en modo inserción
@@ -29,7 +29,6 @@ keymap("n", "<leader>tn", ":tabnew<CR>", { desc = "Nueva pestaña" })
 -- Cerrar la pestaña actual
 keymap("n", "<leader>tc", ":tabclose<CR>", { desc = "Cerrar pestaña" })
 
--- Navegar entre buffers (archivos abiertos) rápido
+-- Navegar entre buffers (archivos abiertos) rápido Shift+l o Shift+h
 keymap("n", "<S-l>", ":bnext<CR>", { desc = "Siguiente buffer" })
 keymap("n", "<S-h>", ":bprev<CR>", { desc = "Buffer anterior" })
-
