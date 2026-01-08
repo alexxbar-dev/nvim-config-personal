@@ -31,7 +31,7 @@ Para replicar esta configuración, asegúrate de tener instalado **Neovim (v0.9+
 
 3. Espera a que Lazy.nvim instale todos los plugins automáticamente.
 
-4. Reinicia neovim y ejecuta :MasonUpdate para asegurar que los servidores LSP estén al día.
+4. Reinicia neovim y ejecuta `:MasonUpdate` para asegurar que los servidores LSP estén al día.
 
 ## Atajos de plugins (Keymaps)
 
