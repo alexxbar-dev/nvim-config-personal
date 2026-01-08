@@ -3,12 +3,20 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.8',
+    cmd = "Telescope",
+    keys = {
+      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Buscar archivos" },
+      { "<leader>fg", "<cmd>Telescope live_grep<cr>",  desc = "Buscar texto (grep)" },
+      { "<leader>fb", "<cmd>Telescope buffers<cr>",    desc = "Ver buffers abiertos" },
+      { "<leader>fh", "<cmd>Telescope help_tags<cr>",  desc = "Buscar en la ayuda" },
+    },
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local actions = require("telescope.actions")
 
       require('telescope').setup({
         defaults = {
+          path_display = { "smart" },
           mappings = {
             -- Mapeos en modo Inserción (cuando estás escribiendo)
             i = {
@@ -26,13 +34,6 @@ return {
           },
         },
       })
-
-      -- Atajos de teclado principales
-      local builtin = require('telescope.builtin')
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Buscar Archivos' })
-      vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Buscar Texto (Grep)' })
-      vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Ver Buffers abiertos' })
-      vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Buscar en la Ayuda' })
     end
   }
 }

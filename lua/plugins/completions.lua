@@ -3,6 +3,7 @@
 return {
   {
     "hrsh7th/nvim-cmp",
+    event = "InsertEnter",            -- El plugin se carga solo cuando presiono "i", "a" o "o"
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",         -- Inteligencia del LSP
       "L3MON4D3/LuaSnip",             -- Motor de snippets

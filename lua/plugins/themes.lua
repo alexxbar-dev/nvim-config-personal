@@ -2,7 +2,7 @@
 return {
   {
     "folke/tokyonight.nvim",
-    lazy = false,    -- Indicamos el tema que se tiene que cargar primero, desactivamos la carga lenta
+    lazy = true,     -- Indicamos el tema que se tiene que cargar primero, desactivamos la carga lenta
     priority = 1000, -- Indicamos la prioridad sobre otros plugins
     -- Ambas opciones solo lo debe tener el tema/plugin que se va a usar al iniciar la instancia dado que si varios tienen
     -- estas prioridades se hara lento el arranque.
@@ -13,6 +13,7 @@ return {
 
   {
     'olivercederborg/poimandres.nvim',
+    lazy = true,
     config = function()
       require('poimandres').setup {
         -- leave this setup function empty for default config
@@ -25,17 +26,22 @@ return {
   {
     "bluz71/vim-moonfly-colors",
     name = "moonfly",
+    lazy = true,
   },
 
   {
     "EdenEast/nightfox.nvim",
+    lazy = true,
   },
 
   {
     "rebelot/kanagawa.nvim",
+    lazy = true,
+
   },
 
   {
     "mellow-theme/mellow.nvim",
+    lazy = true,
   },
 }

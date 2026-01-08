@@ -3,9 +3,13 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     version = "*",
-    lazy = false,                    -- Queremos que esté disponible desde el inicio
+    cmd = { "NvimTreeToggle", "NvimTreeFocus", "NvimTreeFindFile" }, -- Se carga cuando ejecuto el comando
+    keys = {
+      { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Abrir/Cerrar Explorador" },
+      { "<leader>er", "<cmd>NvimTreeFindFile<CR>", desc = "Encontrar archivo actual" },
+    },
     dependencies = {
-      "nvim-tree/nvim-web-devicons", -- Iconos bonitos para los archivos
+      "nvim-tree/nvim-web-devicons",            -- Iconos bonitos para los archivos
     },
     config = function()
       require("nvim-tree").setup({
@@ -35,12 +39,6 @@ return {
           update_root = false,
         },
       })
-
-      -- Atajo de teclado para abrir/cerrar el explorador
-      -- Usaremos Espacio + e (e de explorador)
-      vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Abrir/Cerrar Explorador' })
-      -- Atajo para poner el foco en el archivo actual dentro del arból estando en el archivo
-      vim.keymap.set('n', '<leader>er', ':NvimTreeFindFile<CR>', { desc = 'Encontrar archivo actual' })
     end,
   },
 }
