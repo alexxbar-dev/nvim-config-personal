@@ -35,8 +35,6 @@ return {
       })
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      local lspconfig_util = require('lspconfig.util') -- Guardamos el util para los root_dir
-      local lspconfig = require('lspconfig')
 
       -- 1. LUA
       vim.lsp.config('lua_ls', {
