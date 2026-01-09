@@ -24,7 +24,7 @@ return {
       cmp.setup({
         -- Hace que la primera opción esté siempre resaltada visualmente
         completion = {
-          completeopt = "menu,menuone,noinsert",
+          completeopt = "menu,menuone,noinsert,noselect",
         },
         snippet = {
           expand = function(args)
@@ -54,7 +54,7 @@ return {
         mapping = cmp.mapping.preset.insert({
           ["<C-Space>"] = cmp.mapping.complete(),
           ["<C-e>"] = cmp.mapping.abort(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<CR>"] = cmp.mapping.confirm({ select = false }),
           -- false: Solo confirma si seleccionas algo, true: al presionar enter confirma la opcion seleccionada
 
           -- NAVEGACIÓN MANUAL (Reemplaza alTab)

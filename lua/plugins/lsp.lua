@@ -129,6 +129,9 @@ return {
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Ir a definición" })
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = "Ver documentación" })
       vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "Acciones de código" })
+      -- Renombrar letra,palabras u oraciones con LSP (funciona solo en modo normal y sobre una sola entidad a la vez)
+      -- Es decir no funcionara en modo visual ni podras seleccionar oraciones dado que lo hace por variable, funcion, etc.
+      vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'LSP Rename' })
     end,
   }
 }
