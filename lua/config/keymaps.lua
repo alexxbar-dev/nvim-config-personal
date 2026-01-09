@@ -70,3 +70,7 @@ keymap("v", "<leader>r", [[y/\V<C-r>=escape(@",'/\')<CR><CR>Ncgn]], { desc = "Se
 -- 3. Magia: Neovim automáticamente resalta todas las coincidencias, vuelve a la posición original, borra el texto seleccionado y te deja en Modo Inserción.
 -- 4. Escribes el nuevo texto y presionas Esc o jk.
 -- 5. Ahora solo usas n para saltar a la siguiente y . para repetir (o n para ignorar).
+
+-- Llamada al archivo de configuración de la terminal
+local terminal = require("config.terminal_config")
+terminal.setup()
