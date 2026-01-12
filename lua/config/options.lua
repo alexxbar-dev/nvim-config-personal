@@ -24,7 +24,7 @@ opt.termguicolors = true -- Activa colores de 24 bits (necesario para temas mode
 opt.signcolumn = "yes"   -- Siempre muestra la columna de la izquierda (donde aparecen errores de código).
 -- Evita que el texto "salte" cuando aparece un error.
 
-opt.scrolloff = 8 -- Mantiene siempre 8 líneas visibles arriba/abajo del cursor al hacer scroll.
+opt.scrolloff = 4 -- Mantiene siempre 8 líneas visibles arriba/abajo del cursor al hacer scroll.
 -- Así nunca tienes el cursor pegado al borde superior/inferior.
 
 opt.mouse = "a"      -- Permite usar el mouse (para redimensionar splits o hacer clic).
