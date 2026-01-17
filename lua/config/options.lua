@@ -36,8 +36,3 @@ opt.cmdheight = 1    -- Asegura que haya espacio para mensajes abajo
 
 -- Reducimos el tiempo de espera entre combinaciones de teclas
 opt.timeoutlen = 500 -- El tiempo de espera en milisegundos
-
--- === THEMES ===
--- Esto intenta forzar que el fondo sea el de la terminal
---vim.cmd([[highlight Normal guibg=NONE ctermbg=NONE]])
---vim.cmd.colorscheme("mellow")
