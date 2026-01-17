@@ -7,6 +7,12 @@ require("config.keymaps")
 -- Load Lazy's plugin manager
 require("config.lazy")
 
+-- Elimina los espacios al final de la linea al guardar
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
+
 -- === THEMES GLOBAL CONFIGURATION ===
 vim.cmd([[colorscheme wildcharm]])
 -- Un color más suave para que la letra se lea mejor al seleccionar
